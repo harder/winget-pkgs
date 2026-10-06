@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+PackageIdentifier: Harder.WinGetScout
+PackageVersion: 0.2.2
+InstallerType: zip
+NestedInstallerType: portable
+ArchiveBinariesDependOnPath: true
+Commands:
+- wingetscout
+Installers:
+- Architecture: x64
+  NestedInstallerFiles:
+  - RelativeFilePath: wingetscout/wingetscout.exe
+    PortableCommandAlias: wingetscout
+  InstallerUrl: https://github.com/harder/wingetscout/releases/download/v0.2.2/wingetscout-0.2.2-win-x64.zip
+  InstallerSha256: 22576084B4A29D2CFA720430A25EB6EF35BDCAF4B2893232619A68BBD9B9616C
+- Architecture: arm64
+  NestedInstallerFiles:
+  - RelativeFilePath: wingetscout/wingetscout.exe
+    PortableCommandAlias: wingetscout
+  InstallerUrl: https://github.com/harder/wingetscout/releases/download/v0.2.2/wingetscout-0.2.2-win-arm64.zip
+  InstallerSha256: 086151B661616295B1635AECC0396D4AE0C998F5BDF76A5A13BACE8379CD056E
+ManifestType: installer
+ManifestVersion: 1.12.0
+
